@@ -10,7 +10,7 @@
                             <div class="answer-stub-choice" v-for="(item2,index2) in choices" :key="index2">
                                 <span class="label"></span>
                                 <span v-for="(item3,index3) in item2[index]" :key="index3">
-                                    <input type="radio" value="1" name="choice_17217">
+                                    <input type="radio" :value="index" :name="index" >
                                     <span class="choice">{{item3}}</span>
                                 </span>
                             </div>
@@ -102,7 +102,8 @@ export default {
     data () {
         return {
             list: [],
-            choices: []
+            choices: [],
+			rdo:[]
         }
     },
     computed: {
